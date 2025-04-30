@@ -3,11 +3,11 @@
         let operator = "";
         
         const buttons = document.querySelectorAll(".button");
-        const display = document.getElementById("display");
+        const display = document.querySelector("#display");
         
         // Helper function to update the display
         function updateDisplay() {
-          display.value = firstNumber + " " + operator + " " + secondNumber;
+          display.innerText = firstNumber + " " + operator + " " + secondNumber;
         }
         
         // Calculate result
@@ -54,6 +54,7 @@
             secondNumber = "";
             operator = "";
           }
+          console.log(buttonTitle);
         
           updateDisplay();
         }
